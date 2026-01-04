@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, Users, Target } from 'lucide-react';
 
 const Sidebar = () => {
@@ -10,19 +10,18 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 bg-gradient-to-b from-blue-200 to-blue-400 rounded-3xl p-6 flex flex-col gap-4">
-      <div className="bg-white rounded-full px-6 py-3 mb-4">
-        <span className="font-bold text-2xl">
-          <span className="text-red-500">T</span>
-          <span className="text-orange-500">A</span>
-          <span className="text-yellow-500">L</span>
-          <span className="text-green-500">A</span>
-          <span className="text-blue-500">N</span>
-          <span className="text-purple-500">T</span>
-          <span className="text-red-500">I</span>
-          <span className="text-orange-500">X</span>
-        </span>
-      </div>
+    <div className="w-65 bg-gradient-to-b from-blue-200 to-blue-400 rounded-3xl p-6 flex flex-col gap-4">
+      <Link
+        to="/home"
+      >
+        <div className="bg-white rounded-full px-10 py-3 mb-4">
+          <span className="font-bold text-2xl">
+            <span className="text-sky-500">TALAN</span>
+            <span className="text-blue-500">T</span>
+            <span className="text-purple-500">UP</span>
+          </span>
+        </div>
+      </Link>
 
       {menuItems.map((item) => {
         const { Icon } = item;

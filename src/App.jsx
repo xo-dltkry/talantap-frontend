@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Clubs from './pages/Clubs';
 import Contacts from './pages/Contacts';
 import Recommendations from './pages/Recommendations';
+import Enrollment from './pages/Enrollment';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/recommendations" element={<Recommendations />} />
+        <Route path="/enrollment" element={<Enrollment />} />
         <Route path="/" element={<Navigate to="/home" replace />} />
       </Routes>
     </div>
